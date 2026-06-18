@@ -1,0 +1,121 @@
+/* CafeForge — styles.css | ISW-521 Lab #1 | Mobile-first */
+
+:root{
+  --fondo:#faf7f2;--fondo2:#f0ebe0;--tarjeta:#fff;--borde:#e2d9c8;
+  --texto:#1a1209;--gris:#6b5c42;--cafe:#8b4513;--cafe2:#6b3410;
+  --radio:10px;--t:.3s ease;
+}
+[data-theme="dark"]{
+  --fondo:#120d07;--fondo2:#1e1509;--tarjeta:#2a1d0e;--borde:#3d2b15;
+  --texto:#f5ede0;--gris:#b89a72;--cafe:#c4783a;--cafe2:#d4944f;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Trebuchet MS',sans-serif;background:var(--fondo);color:var(--texto);line-height:1.7;transition:background var(--t),color var(--t)}
+ul{list-style:none} img{max-width:100%;display:block}
+a{color:var(--cafe);text-decoration:none} a:hover{color:var(--cafe2)}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.2}
+h1{font-size:clamp(1.8rem,5vw,3rem)} h2{font-size:clamp(1.4rem,3vw,2.2rem)}
+em{color:var(--cafe);font-style:italic}
+
+/* Foco visible con teclado — requerido por WCAG */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:3px solid var(--cafe);outline-offset:3px;border-radius:4px
+}
+
+.seccion{padding:3rem 1rem}
+.fondo-alt{background:var(--fondo2);transition:background var(--t)}
+.encabezado{text-align:center;margin-bottom:2rem}
+.etiqueta{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--cafe);border:1px solid var(--borde);padding:.2rem .8rem;border-radius:50px;margin-bottom:.75rem}
+
+.btn{display:inline-block;padding:.65rem 1.5rem;background:var(--cafe);color:#fff;border:2px solid var(--cafe);border-radius:50px;font-size:.9rem;font-weight:600;cursor:pointer;transition:all var(--t);font-family:'Trebuchet MS',sans-serif}
+.btn:hover{background:var(--cafe2);border-color:var(--cafe2)}
+.btn-completo{width:100%}
+
+/* HEADER — FLEXBOX: distribuye logo, links y botón */
+header{position:sticky;top:0;z-index:100;background:var(--fondo);border-bottom:1px solid var(--borde);transition:background var(--t)}
+nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;padding:.85rem 1rem}
+.logo{font-family:Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--texto)}
+.logo:hover{color:var(--cafe)}
+nav ul{display:flex;flex-wrap:wrap;gap:.1rem}
+nav ul a{color:var(--gris);font-size:.85rem;padding:.3rem .6rem;border-radius:50px}
+nav ul a:hover{color:var(--cafe);background:var(--fondo2)}
+nav button{background:var(--fondo2);border:1px solid var(--borde);border-radius:50px;padding:.3rem .8rem;font-size:.8rem;font-family:'Trebuchet MS',sans-serif;color:var(--texto);cursor:pointer;transition:background var(--t)}
+nav button:hover{background:var(--borde)}
+
+/* HERO — FLEXBOX: mobile columna, tablet+ fila */
+.hero{display:flex;flex-direction:column;gap:1.5rem;padding:2.5rem 1rem;text-align:center}
+.hero-texto p{color:var(--gris);margin:.75rem 0 1.25rem}
+.hero img{width:100%;height:250px;object-fit:cover;border-radius:var(--radio)}
+
+/* STATS — GRID: mobile 2 col, tablet+ 4 col */
+.stats{background:var(--cafe);padding:2rem 1rem}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;text-align:center}
+.stat strong{display:block;font-family:Georgia,serif;font-size:2rem;color:#fff}
+.stat span{font-size:.82rem;color:rgba(255,255,255,.85)}
+
+/* NOSOTROS/CONTACTO — FLEXBOX: mobile columna, tablet+ fila */
+.dos-columnas{display:flex;flex-direction:column;gap:2rem}
+.texto h2{margin-bottom:.75rem} .texto p{color:var(--gris);margin-bottom:.75rem}
+.dos-columnas img{width:100%;height:220px;object-fit:cover;border-radius:var(--radio)}
+
+/* MENÚ — GRID: mobile 1, tablet 2, desktop 3 */
+.menu-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+article{background:var(--tarjeta);border:1px solid var(--borde);border-radius:var(--radio);overflow:hidden;transition:transform var(--t),box-shadow var(--t)}
+article:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(139,69,19,.12)}
+article img{width:100%;height:170px;object-fit:cover}
+.info{padding:1rem}
+.fila{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem}
+.info h3{font-size:.95rem}
+.precio{font-family:Georgia,serif;font-size:.9rem;font-weight:700;color:var(--cafe);white-space:nowrap}
+.info p{font-size:.85rem;color:var(--gris)}
+
+/* PROCESO — GRID: mobile 1, tablet 2, desktop 4 */
+.proceso-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1rem}
+.paso{background:var(--tarjeta);border:1px solid var(--borde);border-radius:var(--radio);padding:1.25rem;transition:border-color var(--t)}
+.paso:hover{border-color:var(--cafe)}
+.num{display:block;font-size:.7rem;font-weight:700;letter-spacing:.1em;color:var(--cafe);text-transform:uppercase;margin-bottom:.4rem}
+.paso h3{font-size:.95rem;margin-bottom:.3rem} .paso p{font-size:.83rem;color:var(--gris)}
+
+/* CONTACTO — info y formulario */
+.lista-contacto{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.25rem}
+.lista-contacto li{font-size:.9rem;color:var(--gris)}
+.lista-contacto strong{color:var(--texto)}
+.lista-contacto a{color:var(--gris)} .lista-contacto a:hover{color:var(--cafe)}
+.formulario{background:var(--tarjeta);border:1px solid var(--borde);border-radius:var(--radio);padding:1.5rem}
+.formulario h3{margin-bottom:1.25rem}
+.campo{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1rem}
+.campo label{font-size:.83rem;font-weight:600}
+.campo input,.campo textarea{padding:.6rem .85rem;border:1.5px solid var(--borde);border-radius:8px;background:var(--fondo);color:var(--texto);font-family:'Trebuchet MS',sans-serif;font-size:.88rem;transition:border-color var(--t),background var(--t);resize:vertical}
+.campo input:focus,.campo textarea:focus{outline:none;border-color:var(--cafe)}
+.campo input::placeholder,.campo textarea::placeholder{color:var(--gris)}
+
+/* FOOTER — FLEXBOX */
+footer{background:var(--tarjeta);border-top:1px solid var(--borde);padding:1.5rem 1rem .75rem}
+.pie{display:flex;flex-direction:column;align-items:center;gap:.75rem;margin-bottom:1rem;text-align:center}
+.pie nav{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.pie nav a{font-size:.85rem;color:var(--gris)} .pie nav a:hover{color:var(--cafe)}
+.copyright{text-align:center;font-size:.78rem;color:var(--gris);padding-top:.75rem;border-top:1px solid var(--borde)}
+
+/* MEDIA QUERIES — MOBILE FIRST */
+@media(min-width:600px){
+  .seccion{padding:4rem 1.5rem}
+  .hero{flex-direction:row;text-align:left;align-items:center;padding:4rem 1.5rem}
+  .hero-texto{flex:1} .hero img{flex:0 0 280px;height:300px}
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+  .dos-columnas{flex-direction:row;align-items:center;gap:3rem}
+  .dos-columnas .texto,.dos-columnas aside,.dos-columnas .formulario{flex:1}
+  .dos-columnas img{height:280px}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .proceso-grid{grid-template-columns:repeat(2,1fr)}
+  .pie{flex-direction:row;justify-content:space-between;text-align:left}
+  .pie nav{justify-content:flex-end}
+}
+@media(min-width:900px){
+  .seccion{padding:5rem 2rem}
+  nav,.hero,.stats-grid,.encabezado,.menu-grid,.proceso-grid,.pie,.seccion>.dos-columnas{max-width:1100px;margin-left:auto;margin-right:auto}
+  .hero img{flex:0 0 440px;height:460px;border-radius:16px}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .proceso-grid{grid-template-columns:repeat(4,1fr)}
+}

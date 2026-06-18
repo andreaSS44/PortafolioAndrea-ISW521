@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CafeForge — Café Artesanal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio" class="logo" aria-label="CafeForge inicio">CafeForge</a>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button id="themeBtn" aria-label="Cambiar tema" aria-pressed="false">Modo oscuro</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" aria-labelledby="tituloHero">
+      <div class="hero">
+        <div class="hero-texto">
+          <span class="etiqueta">Tostado artesanal desde 2018</span>
+          <h1 id="tituloHero">Cada taza cuenta <em>una historia</em></h1>
+          <p>Seleccionamos, tostamos y servimos café de especialidad directamente de origen.</p>
+          <a href="#menu" class="btn">Ver Menú</a>
+        </div>
+        <img src="img/hero.png" alt="Cappuccino artesanal en taza blanca sobre mesa de madera">
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Estadísticas de CafeForge">
+      <div class="stats-grid">
+        <div class="stat"><strong>6+</strong><span>Años de experiencia</span></div>
+        <div class="stat"><strong>12</strong><span>Orígenes de café</span></div>
+        <div class="stat"><strong>3,500</strong><span>Clientes satisfechos</span></div>
+        <div class="stat"><strong>8</strong><span>Premios obtenidos</span></div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion" aria-labelledby="tituloNosotros">
+      <div class="dos-columnas">
+        <div class="texto">
+          <span class="etiqueta">Quiénes somos</span>
+          <h2 id="tituloNosotros">Artesanos del café, no solo baristas</h2>
+          <p>CafeForge nació de una obsesión: encontrar el café perfecto. Trabajamos directamente con agricultores de Costa Rica, Etiopía y Colombia.</p>
+          <p>Cada lote se tuesta a mano, controlando temperatura y tiempo para resaltar los sabores únicos de cada origen.</p>
+        </div>
+        <aside aria-label="Interior del café CafeForge">
+          <img src="img/nosotros.png" alt="Mesa de café con prensa francesa junto a ventana con plantas">
+        </aside>
+      </div>
+    </section>
+
+    <section id="menu" class="seccion fondo-alt" aria-labelledby="tituloMenu">
+      <div class="encabezado">
+        <span class="etiqueta">Especialidades</span>
+        <h2 id="tituloMenu">El menú que te va a enamorar</h2>
+      </div>
+      <div class="menu-grid" role="list">
+
+        <article aria-label="Espresso Forge">
+          <img src="img/menu-espresso.png" alt="Taza de espresso rodeada de granos de café">
+          <div class="info">
+            <div class="fila"><h3>Espresso Forge</h3><span class="precio">₡2,500</span></div>
+            <p>Concentrado intenso con notas de chocolate y caramelo.</p>
+          </div>
+        </article>
+
+        <article aria-label="Cappuccino">
+          <img src="img/hero.png" alt="Cappuccino con arte latte y granos de café">
+          <div class="info">
+            <div class="fila"><h3>Cappuccino</h3><span class="precio">₡2,800</span></div>
+            <p>Espresso con leche vaporizada y abundante espuma cremosa.</p>
+          </div>
+        </article>
+
+        <article aria-label="Latte Artesanal">
+          <img src="img/menu-latte.png" alt="Latte en vaso alto con capas de café y leche espumada">
+          <div class="info">
+            <div class="fila"><h3>Latte Artesanal</h3><span class="precio">₡3,000</span></div>
+            <p>Espresso doble con leche vaporizada. Suave y muy aromático.</p>
+          </div>
+        </article>
+
+        <article aria-label="Flat White">
+          <img src="img/menu-flatwhite.png" alt="Flat white con arte latte y galletas al lado">
+          <div class="info">
+            <div class="fila"><h3>Flat White</h3><span class="precio">₡2,900</span></div>
+            <p>Ristretto doble con microespuma. Intenso y equilibrado.</p>
+          </div>
+        </article>
+
+        <article aria-label="Moccacino">
+          <img src="img/menu-moccacino.png" alt="Moccacino en taza gris con arte latte de chocolate">
+          <div class="info">
+            <div class="fila"><h3>Moccacino</h3><span class="precio">₡3,200</span></div>
+            <p>Espresso con chocolate y leche vaporizada. Dulce e intenso.</p>
+          </div>
+        </article>
+
+        <article aria-label="Pour Over V60">
+          <img src="img/menu-pourover.png" alt="Preparación de café con método pour over V60">
+          <div class="info">
+            <div class="fila"><h3>Pour Over V60</h3><span class="precio">₡3,800</span></div>
+            <p>Filtrado manual que resalta la acidez brillante del café.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="proceso" class="seccion" aria-labelledby="tituloProceso">
+      <div class="encabezado">
+        <span class="etiqueta">Cómo lo hacemos</span>
+        <h2 id="tituloProceso">Del grano a tu taza</h2>
+      </div>
+      <div class="proceso-grid">
+        <div class="paso"><span class="num">01</span><h3>Selección de origen</h3><p>Visitamos fincas y cooperativas para elegir los mejores lotes de cada cosecha.</p></div>
+        <div class="paso"><span class="num">02</span><h3>Tostado artesanal</h3><p>Tostamos en pequeños lotes con temperatura controlada para cada perfil de sabor.</p></div>
+        <div class="paso"><span class="num">03</span><h3>Control de calidad</h3><p>Cada lote pasa por una cata técnica antes de llegar a tu taza.</p></div>
+        <div class="paso"><span class="num">04</span><h3>Preparación experta</h3><p>Nuestros baristas certificados preparan cada bebida con técnica y precisión.</p></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion fondo-alt" aria-labelledby="tituloContacto">
+      <div class="dos-columnas">
+
+        <div class="texto">
+          <span class="etiqueta">Visítanos</span>
+          <h2 id="tituloContacto">¿Listo para tu próxima taza?</h2>
+          <ul class="lista-contacto">
+            <li><strong>Dirección:</strong> Barrio Escalante, San José</li>
+            <li><strong>Horario:</strong> Lun–Vie 7am–7pm · Sáb 8am–5pm</li>
+            <li><strong>Teléfono:</strong> <a href="tel:+50688001234" aria-label="Llamar al +506 8800-1234">+506 8800-1234</a></li>
+            <li><strong>Correo:</strong> <a href="mailto:hola@cafeforge.cr" aria-label="Escribir a hola@cafeforge.cr">hola@cafeforge.cr</a></li>
+          </ul>
+          <img src="img/contacto1.png" alt="Tres tazas de café con arte latte sobre mesa con plantas">
+        </div>
+
+        <div class="formulario" role="form" aria-label="Formulario de contacto">
+          <h3>Escríbenos</h3>
+          <div class="campo">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" placeholder="Ej. María Rodríguez" autocomplete="name" aria-required="true">
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="tu@correo.com" autocomplete="email" aria-required="true">
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" aria-required="true"></textarea>
+          </div>
+          <button type="button" class="btn btn-completo" id="enviar">Enviar mensaje</button>
+          <p id="respuesta" role="status" aria-live="polite"></p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="pie">
+      <a href="#inicio" class="logo" aria-label="CafeForge, volver al inicio">CafeForge</a>
+      <nav aria-label="Navegación pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#menu">Menú</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <p class="copyright">© 2024 CafeForge. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
